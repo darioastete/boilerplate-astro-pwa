@@ -1,0 +1,3 @@
+This Astro Vue PWA Boilerplate was built by Culqi team!
+
+Checkout the https://humanstxt.org/ protocol to see how you should format your humans.txt file!

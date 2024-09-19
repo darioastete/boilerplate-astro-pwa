@@ -1,0 +1,38 @@
+pre-push:
+  commands:
+    check:
+      glob: "*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}"
+      run: npx @biomejs/biome check --no-errors-on-unmatched --files-ignore-unknown=true {push_files}
+
+commit-msg:
+  scripts:
+    "validate_commit_msg":
+      runner: bash
+
+pre-commit:
+  commands:
+    format_with_biome:
+      run: |
+        npx @biomejs/biome format --write {staged_files}
+        git add {staged_files}
+    check:
+      run: |
+        npx @biomejs/biome check --no-errors-on-unmatched --files-ignore-unknown=true {staged_files}
+        if [ $? -ne 0 ]; then
+          echo "Biome ha encontrado errores. Corrige los errores antes de hacer commit."
+          exit 1
+        fi
+    build_check:
+      run: |
+        npm run build
+        if [ $? -ne 0 ]; then
+          echo "Error en la construcción del proyecto. Corrige los errores antes de hacer commit."
+          exit 1
+        fi
+    test_check:
+      run: |
+        npm run test
+        if [ $? -ne 0 ]; then
+          echo "Las pruebas han fallado. Corrige los errores antes de hacer commit."
+          exit 1
+        fi

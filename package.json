@@ -1,0 +1,38 @@
+{
+  "name": "basic-template",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "prepare": "lefthook install",
+    "format": "npx @biomejs/biome format --write .",
+    "lint": "npx @biomejs/biome lint --write src/*",
+    "check": "npx @biomejs/biome check --write src/*",
+    "test": "vitest run",
+    "coverage": "vitest run --coverage",
+    "generate": "astro build",
+    "generate:development": "astro build --mode=development",
+    "generate:qa": "astro build --mode=qa",
+    "generate:production": "astro build --mode=production"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.3",
+    "@astrojs/sitemap": "^3.1.6",
+    "@astrojs/tailwind": "^5.1.1",
+    "astro": "^4.15.6",
+    "tailwindcss": "^3.4.12",
+    "typescript": "^5.6.2",
+    "@biomejs/biome": "1.9.1",
+    "@vite-pwa/astro": "^0.4.3",
+    "astro-compress": "^2.3.1",
+    "lefthook": "^1.7.15",
+    "vite-plugin-node-polyfills": "^0.22.0",
+    "vitest": "^2.1.1"
+  }
+}

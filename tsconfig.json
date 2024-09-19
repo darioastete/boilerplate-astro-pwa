@@ -1,0 +1,25 @@
+{
+  "extends": "astro/tsconfigs/strict",
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "jsx": "preserve",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "allowSyntheticDefaultImports": true,
+    "types": ["astro/client"],
+    "baseUrl": ".",
+    "outDir": "./build",
+    "paths": {
+      "~/*": ["src/*"],
+      "@icon/*": ["src/assets/icons/*"],
+      "@image/*": ["src/assets/images/*"],
+      "@style/*": ["src/assets/styles/*"],
+      "@util/*": ["src/shared/utils/*"],
+      "@middleware/*": ["src/middleware/*"],
+      "@layout/*": ["src/layouts/*"]
+    }
+  },
+  "exclude": ["node_modules", "dist"]
+}
