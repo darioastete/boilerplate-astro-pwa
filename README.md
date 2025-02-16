@@ -1,56 +1,89 @@
-# Web App
+# 🌐 Web App
 
-Aplicación Web Progresiva
+Progressive Web Application (PWA)
 
-## 🚀 Comenzando
+## 🚀 Getting Started
 
-### 📋 Pre-requisitos
+### 📋 Prerequisites
 
-- Acceso y permisos a este repositorio.
-- Visual Studio Code (de preferencia).
-- Npm.
-- Git.
+Before setting up the project, ensure you have the following:
 
-### 🔧 Instalación
+- Access and necessary permissions for this repository.
+- **Visual Studio Code** (recommended).
+- **npm** (Node Package Manager).
+- **Git**.
 
-Instalar todas las dependencias que tenemos en el package.json:
+### 🔧 Installation
 
-```
+Install all dependencies listed in `package.json` by running:
+
+```sh
 npm install
 ```
 
-## 📦 Despliegue
+Then, set up the pre-commit hooks and necessary configurations with:
 
-Corremos el proyecto en nuestro ambiente local:
-
+```sh
+npm run prepare
 ```
+
+## 📦 Deployment
+
+To run the project in a local development environment, execute:
+
+```sh
 npm run dev
 ```
 
-Finalmente, ingresamos al siguiente enlace para poder ver en vivo nuestro proyecto en desarrollo.
+### 🔨 Build
+
+To build the project, run:
+
+```sh
+npm run build
+```
+
+Once the server is running, open the provided URL in your browser to preview the live project.
+
+## ⚙️ Features
+
+This project includes a set of tools and configurations to improve development workflow and code quality:
+
+- 🚀 PWA (Progressive Web App) – Fully optimized for offline capabilities and enhanced performance.
+- 📏 Biome – Ensures code consistency by handling formatting and linting (Prettier + ESLint).
+- 🛠️ Lefthook – Git hooks automation for enforcing code quality before commits.
+- ✅ Pre-commit Hooks – Automated checks to prevent errors before committing code.
 
 ## 🛠️ Construido con
 
-- [Vue 3](https://v3.vuejs.org/) - El framework de frontend web que usamos.
-- [Astro](https://astro.build/) - Herramienta de construcción y desarrollo.
-- [Tailwind CSS](https://tailwindcss.com/) - El framework de CSS para aplicar estilos que usamos.
+- [Vue 3](https://v3.vuejs.org/) - The frontend framework used in this project.
+- [Astro](https://astro.build/) - The build and development tool.
+- [Tailwind CSS](https://tailwindcss.com/) - The utility-first CSS framework for styling.
 
-## 🖇️ Colaborando
-
-(En desarrollo)
-
-## 📌 Versión
+## 🖇️ Contributing
 
 (En desarrollo)
 
-## ✒️ Autores
+## 📌Version
 
-- Dario Astete
+v1.0.0
+
+## ✒️ Author
+
+- [Dario Astete](https://github.com/darioastete)
 
 ## 📄 Licencia
 
-(En desarrollo)
+MIT License
 
 ## 🎁 Expresiones de Gratitud
 
 (En desarrollo)
+
+### 🔹 **What’s improved?**
+
+✔️ **Added a dedicated "Features" section** to clearly highlight **PWA, Biome, Lefthook, and Git hooks**.  
+✔️ **Better structure** so developers immediately see what's included.  
+✔️ **Concise descriptions** making the README easy to scan.
+
+Let me know if you want further refinements! 🚀🔥
